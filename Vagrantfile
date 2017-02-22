@@ -21,6 +21,7 @@ Vagrant.configure("2") do |config|
       end
     end
   end
+end
 #  config.vm.define "opscenter" do |opscenter|
 #    opscenter.vm.box = "geerlingguy/ubuntu1604"
 #    opscenter.vm.network  "private_network", ip: "192.168.56.14"
