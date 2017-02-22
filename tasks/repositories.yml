@@ -1,9 +1,16 @@
-- name: adding oracle java repository
-  apt_repository: repo='ppa:webupd8team/java' state=present
-  register: java
-  until: java|success
-  retries: 5
-  delay: 5
+#- name: adding oracle java repository
+#  apt_repository: repo='ppa:webupd8team/java' state=present
+#  register: java
+#  until: java|success
+#  retries: 5
+#  delay: 5
+
+
+- name: Install latest version of "openjdk-7-jdk" ignoring "install-recommends"
+  apt:
+    name: openjdk-7-jdk
+    state: latest
+    install_recommends: no
 
 - name: adding dse repo
   shell: echo "deb http://datastaxrepo_gmail.com:utJVKEg4lKeaWTX@debian.datastax.com/enterprise stable main" | sudo tee -a /etc/apt/sources.list.d/datastax.sources.list
