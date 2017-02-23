@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  N = 3
+  N = 1
   (1..N).each do |machine_id|
     config.vm.box = "debian/wheezy64"
   #  config.vm.box_url = "https://vagrantcloud.com/geerlingguy/boxes/ubuntu1604"
